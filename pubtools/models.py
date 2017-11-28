@@ -23,8 +23,6 @@ class PublishableModelQuerySet(models.QuerySet):
 
         status = request.GET.get(STATUS_FLAG) if request else None
 
-        print(status)
-
         # show all to staff members
         if status == 'draft' and request.user.is_staff:
             return self
