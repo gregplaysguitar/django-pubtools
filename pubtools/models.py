@@ -41,9 +41,9 @@ class PublishableModelQuerySet(models.QuerySet):
 class AbstractPublishableModel(models.Model):
     """Custom publication logic for mmoser content models. """
 
-    PUB_STATUS_DRAFT = 0
-    PUB_STATUS_PREVIEW = 1
-    PUB_STATUS_PUBLISHED = 2
+    PUB_STATUS_DRAFT = 10
+    PUB_STATUS_PREVIEW = 20
+    PUB_STATUS_PUBLISHED = 30
     PUB_STATUS_CHOICES = (
         (PUB_STATUS_DRAFT, 'Draft'),
         (PUB_STATUS_PREVIEW, 'Preview'),
