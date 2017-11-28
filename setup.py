@@ -18,7 +18,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     platforms='any',
-    install_requires=['Django>=1.8', 'django-next-prev>=1.0'],
+    install_requires=['Django>=1.10', 'django-next-prev>=1.0'],
     keywords=['django', 'publishing'],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
