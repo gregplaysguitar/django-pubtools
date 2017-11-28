@@ -114,3 +114,8 @@ class PubtoolsTestCase(TestCase):
         article = Article.objects.create(
             pub_status=Article.PUB_STATUS_PUBLISHED)
         self.assertEqual(admin_obj.view_on_site(article), '/%s' % article.id)
+
+        admin_obj.publish_selected({}, Article.objects.all())
+        published = Article.objects.filter(
+            pub_status=Article.PUB_STATUS_PUBLISHED)
+        self.assertEqual(published.count(), 3)
