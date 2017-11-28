@@ -42,7 +42,7 @@ class PubtoolsTestCase(TestCase):
         client = Client()
         article = Article.objects.create(
             pub_status=Article.PUB_STATUS_PREVIEW)
-        client.post('/login', {'username': USERNAME, 'password': PASSWORD})
+        client.login(username=USERNAME, password=PASSWORD)
         url = article.get_absolute_url() + \
             '?%s=preview' % (STATUS_FLAG)
         response = client.get(url)
@@ -52,7 +52,7 @@ class PubtoolsTestCase(TestCase):
         client = Client()
         article = Article.objects.create(
             pub_status=Article.PUB_STATUS_DRAFT)
-        client.post('/login', {'username': USERNAME, 'password': PASSWORD})
+        client.login(username=USERNAME, password=PASSWORD)
         url = article.get_absolute_url() + \
             '?%s=draft' % (STATUS_FLAG)
         response = client.get(url)
