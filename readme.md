@@ -4,6 +4,10 @@ Publishable content can be in either draft, preview, or published status. Draft
 content may be previewed on the site by a logged-in staff member, and preview
 content may be previewed publicly.
 
+[![Circle CI](https://circleci.com/gh/gregplaysguitar/django-pubtools.svg?style=svg)](https://circleci.com/gh/gregplaysguitar/django-pubtools)
+[![codecov](https://codecov.io/gh/gregplaysguitar/django-pubtools/branch/master/graph/badge.svg)](https://codecov.io/gh/gregplaysguitar/django-pubtools)
+[![Latest Version](https://img.shields.io/pypi/v/django-pubtools.svg?style=flat)](https://pypi.python.org/pypi/django-pubtools/)
+
 ## Installation
 
     pip install django-pubtools
