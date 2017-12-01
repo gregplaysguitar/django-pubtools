@@ -52,7 +52,7 @@ from baseclasses.admin import PublishableModelAdminMixin
 from .models import Article
 
 @admin.register(Article)
-class DisciplineAdmin(PublishableModelAdminMixin, admin.ModelAdmin):
+class ArticleAdmin(PublishableModelAdminMixin, admin.ModelAdmin):
     list_display = ['title']
 ```
 
