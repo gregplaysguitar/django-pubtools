@@ -73,7 +73,7 @@ class ArticleAdmin(PublishableModelAdminMixin, admin.ModelAdmin):
 - `get_prev_published(qs=None, loop=False)` get previous published instance
 - `get_next_published(qs=None, loop=False)` get next published instance
 
-### `pubtools.models.AbstractPublishableModel`
+### `pubtools.models.PublishableModelQuerySet`
 
 ##### Manager/queryset methods
 
