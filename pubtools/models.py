@@ -55,7 +55,7 @@ class AbstractPublishableModel(models.Model):
     pub_date = models.DateField(u'publication date', db_index=True,
                                 default=datetime.date.today)
     pub_status = models.PositiveSmallIntegerField(
-        choices=PUB_STATUS_CHOICES, default=0, db_index=True)
+        choices=PUB_STATUS_CHOICES, default=PUB_STATUS_DRAFT, db_index=True)
 
     objects = PublishableModelQuerySet.as_manager()
 
