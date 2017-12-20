@@ -15,6 +15,9 @@ class PublishableModelAdminMixin(object):
         qs.update(pub_status=self.model.PUB_STATUS_PUBLISHED)
 
     def view_on_site(self, obj):
+        if not hasattr(obj, 'get_absolute_url'):
+            return None
+
         url = obj.get_absolute_url()
         if not obj.published:
             if obj.pub_status == obj.PUB_STATUS_PREVIEW:
