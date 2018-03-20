@@ -19,6 +19,9 @@ class PublishableModelAdminMixin(object):
             return None
 
         url = obj.get_absolute_url()
+        if not url:
+            return None
+
         if not obj.published:
             if obj.pub_status == obj.PUB_STATUS_PREVIEW:
                 status = 'preview'
