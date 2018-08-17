@@ -1,6 +1,10 @@
 from django.conf.urls import url
-from django.contrib.auth.views import login
-
+try:
+    from django.contrib.auth.views import LoginView
+    login = LoginView.as_view()
+except ImportError:
+    from django.contrib.auth.views import login
+    
 from . import views
 
 
