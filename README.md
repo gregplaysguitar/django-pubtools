@@ -53,7 +53,7 @@ from .models import Article
 
 @admin.register(Article)
 class ArticleAdmin(PublishableModelAdminMixin, admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ('title', 'pub_status', )
 ```
 
 ## Reference
