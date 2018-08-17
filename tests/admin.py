@@ -6,4 +6,4 @@ from .models import Article
 
 @admin.register(Article)
 class ArticleAdmin(PublishableModelAdminMixin, admin.ModelAdmin):
-    list_display = ('__str__', 'pub_status', )
+    list_display = ('pub_status', )
